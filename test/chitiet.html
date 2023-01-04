@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giỏ hàng</title>
+    <link rel="stylesheet" href="chitiet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="text-header">
+                <p>Welcome you to NTB coder store!</p>
+            </div>
+            <div class="text-header-right">
+                <ul>
+                    <li>
+                        <a href="">Compare |</a>
+                        <a href="">Wishlist | </a>
+                        <a href=""> Settings | </a>
+                        <a href="">USD |</a>
+                        <a href=""> English</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav">
+            <h2 class="logo"> NTB <span>coder</span></h2>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                        <a href="product.html">Product</a>
+                        <a href="shops.html">Shop</a>
+                        <a href="chitiet.html">Pages</a>
+                        <a href="chitiet.html">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="search">
+                <input type="text" placeholder="search... ">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="shops">
+            <div class="shops-img">
+                <a href=""><i class="fa-solid fa-house"></i></a>
+            <img src="img/next.png" alt="">
+            <a href=""> shops</a>
+            <img src="img/next.png" alt="">
+            <a href=""> Sản Phẩm 1 </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="box1">
+                        <img src="img/occho.jpg" alt="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img style="border: 1px solid black;" src="img/occgo1.jfif" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="img/occgo1.jfif" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="img/occgo1.jfif" alt="">
+                            </div>
+                           
+                        </div>
+                        <div class="chiase">
+                            <p>Chia sẻ :</p>
+                            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                            <a href=""> <i style="color:#0084FF;" class="fa-brands fa-facebook-messenger"></i> </a>
+                            <a href=""><i style="color:rgb(226, 68, 68);" class="fa-brands fa-instagram-square"></i></a>
+                            <a href=""><i style="color:#0084FF;" class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                        <div class="content">
+                            <p>Hướng dẫn sử dụng:
+                            </p>
+                            <p>
+                                - Nên bảo quản nó ở trong hộp kín, để tiện cho sử dụng và giữ được lâu.
+                            </p>
+                            <p>- Bảo quản nơi khô ráo, thoáng mát, tránh nơi ẩm, nhiệt độ cao.
+                            </p>
+                            <p>Cam kết bao đổi trả, hàng 100% thiên nhiên
+                            </p>
+                            <p>Sử dụng: Ăn ngay hoặc chế biến.</p>
+                            <p>Khối lượng: 0.5kg, 1kg.</p>
+                            <p>Bảo quản: Quả óc chó vàng được bảo quản nơi thoáng mát, khô ráo, điều kiện bình thường, tránh ánh sáng trực tiếp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="box2">
+                        <h2>Quả Óc Chó Vàng (Nhập khẩu Mỹ)</h2>
+                        <p>90,000 VND</p>
+                        <p class="ships">Miễn phí vận chuyển cho đơn hàng từ 200.000</p>
+                        <p style="font-weight:600; font-style: normal;font-size: 14px; ">Khối lượng</p>
+                        <div class="button">
+                            <button style="background-color:#4FB68D; color:white; border: none;">0,5 KG</button>
+                            <button style="background-color: white; color: black;">1 KG</button>
+                        </div>
+                        <p style="font-weight:600; font-style: normal;font-size: 14px; ">Số lượng</p>
+
+                        <div class="soluong">
+                            <button  onclick="tru()" > <i class="fa-solid fa-minus"></i></button>
+                            <div id="number">1</div>
+                            <button  onclick="cong()" ><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                        <div class="cachthuc">
+                            <button> <a href="giohang.html">Thêm vào giỏ</a> </button>
+                        </div>
+                        <div class="cachthuc">
+                            <button> Đặt hàng nhanh </button>
+                        </div>
+                        <div class="content-right">
+                            <p class="text">Quả Óc Chó Vàng có hàm lượng dinh dưỡng cao và chứa nhiều vitamin, khoáng chất tốt cho sức khỏe. Hạt óc chó vàng được xem là bậc nhất các loại hạt dành cho bà bầu & thai nhi, hỗ trợ tối ưu cho sự hình thành & phát triển trí não của thai nhi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        var _text=document.querySelector('#number');
+        var stt=1
+       function tru(){
+           stt--;
+           _text.innerText=stt
+           if( _text.innerText==0)  _text.innerText=0
+       }
+       function cong(){
+           stt++;
+           _text.innerText=stt
+       }
+   </script>    
+</body>
+</html>

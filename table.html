@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="content">
+        <button onclick="an()">Thêm hàng</button>
+        <table border="1" id="cart">
+            <thead>
+                <th>
+                    Tên hàng
+                </th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Thao tác</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SamsungS12</td>
+                    <td>17000000</td>
+                    <td>5</td>
+                    <td></td>
+                    <td><button onclick="xoadong(this)">Xoá</button></td>
+                </tr>
+                <tr>
+                    <td>Laptop HP 17</td>
+                    <td>12000000</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button onclick="xoadong(this)">Xoá</button></td>
+                </tr>
+                <tr>
+                    <td>Iphone 13</td>
+                    <td>20000000</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button onclick="xoadong(this)">Xoá</button></td>
+                </tr>
+                <tr>
+                    <td>Samsung S20</td>
+                    <td>22000000</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button onclick="xoadong(this)">Xoá</button></td>
+
+                </tr>
+                <tr>
+                    <td>Laptop Dell I7</td>
+                    <td>20000000</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button onclick="xoadong(this)">Xoá</button></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td colspan="3">Tổng tiền</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+  
+    <div id="container">
+        <h2 >Thêm sản phẩm</h2>
+        <label for="">Tên sản phẩm</label>
+        <input type="text" name="" id="name">
+        <br>
+        <label for="">Số lượng</label>
+        <input type="number" name="" id="number">
+        <br>
+        <label for="">Đơn giá</label>
+        <input type="number" name="" id="price">
+        <br>
+        <button onclick="them()">Lưu</button>
+        <button onclick="an1()">Đóng lại</button>
+    </div>
+
+    <script>
+        var _table = document.querySelector('#cart tbody')
+        var th_tr = _table.getElementsByTagName('tr');
+
+        for (var i = 0; i < th_tr.length; i++) {
+            var th_td = th_tr[i].getElementsByTagName('td');
+            var price = th_td[1].innerText;
+            var number = th_td[2].innerText;
+            var tien = Number(price * number);
+
+            th_td[3].innerText = tien;
+
+        }
+        function them() {
+            var name = document.querySelector('#name').value;
+            var number = document.querySelector('#number').value;
+            var price = document.querySelector('#price').value;
+            var tr = document.createElement('tr')
+            var td = document.createElement('td')
+            td.innerText = name;
+            tr.appendChild(td)
+
+
+
+            var td1 = document.createElement('td')
+            td1.innerText = price;
+            tr.appendChild(td1)
+
+            var td2 = document.createElement('td')
+            td2.innerText = number;
+            tr.appendChild(td2)
+
+            var td3 = document.createElement('td'); //tạo thẻ td
+            tr.appendChild(td3) //ap vào td 
+            var tien = Number(td1.innerText) * Number(td2.innerText);
+            console.log(tien);
+            td3.innerText = tien;
+
+            var td5 = document.createElement('td');
+            td5.innerHTML = '<button onclick="xoadong(this)">Xóa</button>';
+            tr.appendChild(td5);
+
+            console.log(tr);
+
+            var _table = document.querySelector('#cart tbody') // trả về dữ liệu 
+            _table.appendChild(tr);
+
+
+            document.querySelector('#content').style.display = ''
+            document.querySelector('#container').style.display = 'none'
+        }
+        function xoadong(obj) {
+            var dong = obj.parentElement.parentElement;
+            console.log(dong);
+            var chacuadong = dong.parentElement;
+            chacuadong.removeChild(dong);
+        }
+        function an() {
+            document.querySelector('#content').style.display = 'none'
+            document.querySelector('#container').style.display = "inline"
+        }
+        function an1() {
+            document.querySelector('#content').style.display = ''
+            document.querySelector('#container').style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
